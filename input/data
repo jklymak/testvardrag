@@ -14,8 +14,8 @@
  no_slip_sides=.FALSE.,
  no_slip_bottom=.FALSE.,
  viscA4=0.E12,
- diffKhT=1.0E-4,
- diffKzT=1.E-5,
+ diffKhT=1.0E-2,
+ diffKzT=1.E-3,
  diffKhS=1.E3,
  diffKzS=1.E-5,
  f0=0.E-4,
@@ -41,8 +41,10 @@
 # hFacInf=0.2,
 # hFacSup=1.8,
   exactConserv=.FALSE.,
-  implicitDiffusion=.TRUE.
-  implicitViscosity=.TRUE.
+  implicitDiffusion=.TRUE.,
+  implicitViscosity=.TRUE.,
+  bottomDragLinear=1E-6,
+  bottomDragQuadratic=1E-6,
 # Superbee on:
  tempAdvScheme=77,
  staggerTimeStep=.TRUE.,
