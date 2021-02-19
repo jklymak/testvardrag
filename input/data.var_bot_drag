@@ -1,0 +1,10 @@
+# =====================================================================
+# | Parameters for variable bottom drag      |
+# =====================================================================
+ &VAR_BOT_DRAG_PARM01
+ Var_Bot_Drag_uLinFile = 'DraguLin.bin',
+ Var_Bot_Drag_vLinFile = 'DragvLin.bin',
+ Var_Bot_Drag_uQuadFile = 'DraguQuad.bin',
+ Var_Bot_Drag_vQuadFile = 'DragvQuad.bin'
+ Var_Bot_Drag_facFile = 'BotDragFac.bin'
+/

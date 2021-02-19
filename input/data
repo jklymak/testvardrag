@@ -9,8 +9,8 @@
  debugLevel=2,
  tRefFile='TRef.bin',
  sRef= 25*35.,
- viscAz=1.E-5,
- viscAh=1.0E-4,
+ viscAz=1.E-3,
+ viscAh=1.0E-2,
  no_slip_sides=.FALSE.,
  no_slip_bottom=.FALSE.,
  viscA4=0.E12,
@@ -43,8 +43,8 @@
   exactConserv=.FALSE.,
   implicitDiffusion=.TRUE.,
   implicitViscosity=.TRUE.,
-  bottomDragLinear=1E-6,
-  bottomDragQuadratic=1E-6,
+  bottomDragLinear=1.01E-8,
+  bottomDragQuadratic=1.0001E-6,
 # Superbee on:
  tempAdvScheme=77,
  staggerTimeStep=.TRUE.,
@@ -63,22 +63,22 @@
 # niter0=0,
 # times are in s
  startTime=0,
- endTime=97500,
- deltaT=12.4,
+ endTime=259200,
+ deltaT=200.0,
  abEps=0.1,
 # once per tide checkpoint...
- pChkptFreq=44640,
+ pChkptFreq=43200,
  chkptFreq=0.0,
  dumpFreq=0,
  dumpInitAndLast=.FALSE.
- monitorFreq=1860,
+ monitorFreq=1000,
 # Forcing for boundary condition files
- periodicExternalForcing=.TRUE.,
+# periodicExternalForcing=.FALSE.,
 # 1/12th M2 tidal period...
- externForcingPeriod = 3720.,
+# externForcingPeriod = 3720.,
 # one tidal period (12 records need to be in OBEuFile, etc)
- externForcingCycle = 44640.,
- rwSuffixType=1,
+# externForcingCycle = 44640.,
+ rwSuffixType=2,
 /
 
 # Gridding parameters
@@ -86,13 +86,14 @@
  usingCartesianGrid=.TRUE.,
  usingSphericalPolarGrid=.FALSE.,
  delXfile='delXvar.bin',
- delY=5.e3,
+ delYfile='delYvar.bin',
  delRfile = 'delZvar.bin',
 /
 
 # Input datasets
  &PARM05
  bathyFile='topo.bin',
- mdsioLocalDir='../../',
+ mdsioLocalDir='./',
  hydrogThetaFile='T0.bin',
+ uVelInitFile='U0.bin'
  /

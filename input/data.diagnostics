@@ -1,9 +1,9 @@
 # diagnostics Package
 # Energy terms...
- &diagnostics_list 
+ &diagnostics_list
 # 3D variables.
- frequency(1)  = -1860,
- timePhase(1)      =  0,	
+ frequency(1)  = -1800,
+ timePhase(1)      =  0,
  fields(1:6,1) = 'UVEL    ',
  	       	 'VVEL    ',
 		 'WVEL    ',
@@ -14,10 +14,12 @@
 #
 # 2D state vars.  Bummer these can't be in same file as above.
  filename(2)   = 'statevars2d'
- frequency(2)  = -1860,
+ frequency(2)  = -1800,
  timePhase(2)  = 0,
- fields(1:2,2) = 'ETAN    ',
+ fields(1:4,2) = 'ETAN    ',
  	         'PHIBOT  ',
+           'botTauX',
+           'botTauY',
 #
 /
 
